@@ -9,13 +9,13 @@ manager = Manager(app)
 #localhost:5000
 @app.route('/')
 def index():
-	return 'Hello World!</h1>'
+	return render_template('index.html')
 
 #测试添加参数
 #<name>为浏览器传入的参数
 @app.route('/user/<name>')
 def user(name):
-	return 'Hello, %s' % name
+	return render_template('user.html', name=name)
 
 
 if __name__ == '__main__':
