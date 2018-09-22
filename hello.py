@@ -1,6 +1,8 @@
 from flask import Flask, render_template
+from flask_script import Manager
 
 app = Flask(__name__)
+manager = Manager(app)
 
 
 #测试根目录
@@ -17,6 +19,6 @@ def user(name):
 
 
 if __name__ == '__main__':
-	app.run()
+	manager.run()
 
 
